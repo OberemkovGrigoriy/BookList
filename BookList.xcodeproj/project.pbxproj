@@ -3,27 +3,44 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB0666E425C493BA00DF80DF /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0666E325C493BA00DF80DF /* NetworkClient.swift */; };
+		BB0666E925C56E0E00DF80DF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0666E825C56E0E00DF80DF /* Models.swift */; };
+		BB0666EF25C56F2200DF80DF /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0666EE25C56F2200DF80DF /* SearchService.swift */; };
+		BB0666F425C586CD00DF80DF /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0666F325C586CD00DF80DF /* BookListViewModel.swift */; };
+		BB0666FE25C59D8600DF80DF /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0666FD25C59D8600DF80DF /* BookTableViewCell.swift */; };
+		BB06670125C5DD1A00DF80DF /* AuthorStringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06670025C5DD1900DF80DF /* AuthorStringConverter.swift */; };
+		BB06670425C5F4E900DF80DF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06670325C5F4E900DF80DF /* ImageCache.swift */; };
 		BBE25D4D25C08CDC0032C728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE25D4C25C08CDC0032C728 /* AppDelegate.swift */; };
 		BBE25D4F25C08CDC0032C728 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE25D4E25C08CDC0032C728 /* SceneDelegate.swift */; };
-		BBE25D5125C08CDC0032C728 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE25D5025C08CDC0032C728 /* ViewController.swift */; };
-		BBE25D5425C08CDC0032C728 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE25D5225C08CDC0032C728 /* Main.storyboard */; };
+		BBE25D5125C08CDC0032C728 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE25D5025C08CDC0032C728 /* BookListViewController.swift */; };
 		BBE25D5625C08CDD0032C728 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBE25D5525C08CDD0032C728 /* Assets.xcassets */; };
 		BBE25D5925C08CDD0032C728 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE25D5725C08CDD0032C728 /* LaunchScreen.storyboard */; };
+		BBE25D6525C092DC0032C728 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BBE25D6425C092DC0032C728 /* Alamofire */; };
+		BBE25D6925C092FF0032C728 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = BBE25D6825C092FF0032C728 /* AlamofireImage */; };
+		BBE25D6D25C093190032C728 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BBE25D6C25C093190032C728 /* SnapKit */; };
+		BBE25D7025C0936A0032C728 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE25D6F25C0936A0032C728 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB0666E325C493BA00DF80DF /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		BB0666E825C56E0E00DF80DF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		BB0666EE25C56F2200DF80DF /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		BB0666F325C586CD00DF80DF /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
+		BB0666FD25C59D8600DF80DF /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		BB06670025C5DD1900DF80DF /* AuthorStringConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorStringConverter.swift; sourceTree = "<group>"; };
+		BB06670325C5F4E900DF80DF /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		BBE25D4925C08CDC0032C728 /* BookList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE25D4C25C08CDC0032C728 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBE25D4E25C08CDC0032C728 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BBE25D5025C08CDC0032C728 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BBE25D5325C08CDC0032C728 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BBE25D5025C08CDC0032C728 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
 		BBE25D5525C08CDD0032C728 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBE25D5825C08CDD0032C728 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBE25D5A25C08CDD0032C728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBE25D6F25C0936A0032C728 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +48,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBE25D6D25C093190032C728 /* SnapKit in Frameworks */,
+				BBE25D6525C092DC0032C728 /* Alamofire in Frameworks */,
+				BBE25D6925C092FF0032C728 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB0666E225C493A100DF80DF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BB0666E325C493BA00DF80DF /* NetworkClient.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BB0666E725C56DFB00DF80DF /* BookListModule */ = {
+			isa = PBXGroup;
+			children = (
+				BBE25D5025C08CDC0032C728 /* BookListViewController.swift */,
+				BB0666E825C56E0E00DF80DF /* Models.swift */,
+				BB0666F325C586CD00DF80DF /* BookListViewModel.swift */,
+				BB0666FD25C59D8600DF80DF /* BookTableViewCell.swift */,
+				BB06670025C5DD1900DF80DF /* AuthorStringConverter.swift */,
+			);
+			path = BookListModule;
+			sourceTree = "<group>";
+		};
+		BB0666ED25C56E8500DF80DF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BB0666EE25C56F2200DF80DF /* SearchService.swift */,
+				BB06670325C5F4E900DF80DF /* ImageCache.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		BBE25D4025C08CDC0032C728 = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +105,12 @@
 		BBE25D4B25C08CDC0032C728 /* BookList */ = {
 			isa = PBXGroup;
 			children = (
+				BB0666ED25C56E8500DF80DF /* Services */,
+				BB0666E725C56DFB00DF80DF /* BookListModule */,
+				BB0666E225C493A100DF80DF /* Core */,
 				BBE25D4C25C08CDC0032C728 /* AppDelegate.swift */,
 				BBE25D4E25C08CDC0032C728 /* SceneDelegate.swift */,
-				BBE25D5025C08CDC0032C728 /* ViewController.swift */,
-				BBE25D5225C08CDC0032C728 /* Main.storyboard */,
+				BBE25D6F25C0936A0032C728 /* HeaderView.swift */,
 				BBE25D5525C08CDD0032C728 /* Assets.xcassets */,
 				BBE25D5725C08CDD0032C728 /* LaunchScreen.storyboard */,
 				BBE25D5A25C08CDD0032C728 /* Info.plist */,
@@ -83,6 +134,11 @@
 			dependencies = (
 			);
 			name = BookList;
+			packageProductDependencies = (
+				BBE25D6425C092DC0032C728 /* Alamofire */,
+				BBE25D6825C092FF0032C728 /* AlamofireImage */,
+				BBE25D6C25C093190032C728 /* SnapKit */,
+			);
 			productName = BookList;
 			productReference = BBE25D4925C08CDC0032C728 /* BookList.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +166,11 @@
 				Base,
 			);
 			mainGroup = BBE25D4025C08CDC0032C728;
+			packageReferences = (
+				BBE25D6325C092DC0032C728 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BBE25D6725C092FF0032C728 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				BBE25D6B25C093190032C728 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = BBE25D4A25C08CDC0032C728 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +187,6 @@
 			files = (
 				BBE25D5925C08CDD0032C728 /* LaunchScreen.storyboard in Resources */,
 				BBE25D5625C08CDD0032C728 /* Assets.xcassets in Resources */,
-				BBE25D5425C08CDC0032C728 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +197,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBE25D5125C08CDC0032C728 /* ViewController.swift in Sources */,
+				BB06670425C5F4E900DF80DF /* ImageCache.swift in Sources */,
+				BB06670125C5DD1A00DF80DF /* AuthorStringConverter.swift in Sources */,
+				BBE25D5125C08CDC0032C728 /* BookListViewController.swift in Sources */,
+				BB0666E425C493BA00DF80DF /* NetworkClient.swift in Sources */,
 				BBE25D4D25C08CDC0032C728 /* AppDelegate.swift in Sources */,
+				BB0666E925C56E0E00DF80DF /* Models.swift in Sources */,
+				BB0666FE25C59D8600DF80DF /* BookTableViewCell.swift in Sources */,
 				BBE25D4F25C08CDC0032C728 /* SceneDelegate.swift in Sources */,
+				BB0666F425C586CD00DF80DF /* BookListViewModel.swift in Sources */,
+				BB0666EF25C56F2200DF80DF /* SearchService.swift in Sources */,
+				BBE25D7025C0936A0032C728 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BBE25D5225C08CDC0032C728 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BBE25D5325C08CDC0032C728 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BBE25D5725C08CDD0032C728 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -339,6 +399,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BBE25D6325C092DC0032C728 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+		BBE25D6725C092FF0032C728 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+		BBE25D6B25C093190032C728 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BBE25D6425C092DC0032C728 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBE25D6325C092DC0032C728 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		BBE25D6825C092FF0032C728 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBE25D6725C092FF0032C728 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		BBE25D6C25C093190032C728 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBE25D6B25C093190032C728 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BBE25D4125C08CDC0032C728 /* Project object */;
 }
