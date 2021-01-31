@@ -41,7 +41,7 @@ final class BookListViewModel {
                                 url: $0.cover?.url ?? "",
                                 title: $0.title ?? "",
                                 authors: AuthorStringConverter.convertAuthors($0.authors),
-                                narrators: AuthorStringConverter.convertAuthors($0.narrator)
+                                narrators: AuthorStringConverter.convertAuthors($0.narrators)
                             )
                         }
                         self.items.append(contentsOf: setupItems)

@@ -13,8 +13,7 @@ final class BookListViewController: UIViewController {
     static let cellReuseIdentifier = "BookTableViewCell"
 
     private let activityIndicator = UIActivityIndicatorView()
-    private let tableView = UITableView()
-    private let headerView = HeaderView(title: "Title")
+    private let tableView = UITableView(frame: .zero, style: .grouped)
 
     private let errorTitle: UILabel = {
         let label = UILabel()
@@ -47,6 +46,7 @@ final class BookListViewController: UIViewController {
         return spinner
     }()
 
+    private let header = BookListHeaderView()
     private let viewModel = BookListViewModel()
 
     override func viewDidLoad() {
@@ -63,24 +63,9 @@ final class BookListViewController: UIViewController {
         self.activityIndicator.startAnimating()
         self.tableView.isHidden = true
         self.footerSpinner.isHidden = true
-        self.headerView.scrollView = tableView
-        //self.tableView.sectionHeaderHeight = 250
-        self.headerView.frame = CGRect(
-            x: 0,
-            y: 0,//tableView.safeAreaInsets.top,
-            width: view.frame.width,
-            height: 250)
-       // tableView.backgroundView = UIView()
-      //  tableView.backgroundView?.addSubview(headerView)
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(BookTableViewCell.self, forCellReuseIdentifier: Self.cellReuseIdentifier)
-//        self.tableView.contentInset = UIEdgeInsets(
-//            top: 250,
-//            left: 0,
-//            bottom: 0,
-//            right: 0)
-        
     }
 
     @objc private func reloadFirstPage() {
@@ -135,12 +120,14 @@ extension BookListViewController: BookListViewModelDelegate {
 // MARK: - UITableViewDataSource
 
 extension BookListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return UIView()
-    }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 150
     }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return header
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.viewModel.getItems().count
     }
@@ -152,8 +139,9 @@ extension BookListViewController: UITableViewDataSource {
         let bookCoverCompletion: BookCoverLoadCompletion = { image, id in
             cell.setImage(image: image, id: id)
         }
-        self.viewModel.loadBookCover(url: model.url, id: model.id, completion: bookCoverCompletion)
         cell.updateWithModel(model: model)
+        self.viewModel.loadBookCover(url: model.url, id: model.id, completion: bookCoverCompletion)
+        
         return cell
     }
 }
@@ -162,8 +150,6 @@ extension BookListViewController: UITableViewDataSource {
 
 extension BookListViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        headerView.updatePosition()
-        print("\(scrollView.contentOffset.y) \(scrollView.frame.size.height) \(scrollView.contentSize.height)")
         if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height - 100) {
             self.tableView.tableFooterView = footerSpinner
             self.footerSpinner.isHidden = false
@@ -175,18 +161,4 @@ extension BookListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
-
-//    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-//        print("\(scrollView.contentOffset.y) \(scrollView.frame.size.height) \(scrollView.contentSize.height)")
-//        if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height - 100) {
-//            self.tableView.tableFooterView = footerSpinner
-//            self.footerSpinner.isHidden = false
-//            self.footerSpinner.startAnimating()
-//            self.viewModel.downlaodBooks()
-//        }
-//    }
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-       
-    }
-
 }

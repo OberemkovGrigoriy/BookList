@@ -26,7 +26,7 @@ struct BookEntity: Codable {
     let title: String?
     let cover: BookCover?
     let authors: [Author]?
-    let narrator: [Author]?
+    let narrators: [Author]?
 }
 
 struct Author: Codable {

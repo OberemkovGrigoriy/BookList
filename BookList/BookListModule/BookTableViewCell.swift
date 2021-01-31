@@ -65,11 +65,9 @@ final class BookTableViewCell: UITableViewCell {
     }
 
     func setImage(image: UIImage, id: UUID) {
-        print("debug: no image")
-      //  if self.id == id {
-            print("debug: \(id)")
+        if self.id == id {
             self.bookCoverImageView.image = image
-       // }
+        }
     }
 
     private func setupView() {
