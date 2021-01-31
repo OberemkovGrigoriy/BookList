@@ -15,6 +15,7 @@
 		BB06670125C5DD1A00DF80DF /* AuthorStringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06670025C5DD1900DF80DF /* AuthorStringConverter.swift */; };
 		BB06670425C5F4E900DF80DF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06670325C5F4E900DF80DF /* ImageCache.swift */; };
 		BB06670825C6E83600DF80DF /* BookListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06670725C6E83600DF80DF /* BookListHeaderView.swift */; };
+		BB8C3EAD25C6EFF500BFD3DA /* BookListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C3EAC25C6EFF500BFD3DA /* BookListTests.swift */; };
 		BBE25D4D25C08CDC0032C728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE25D4C25C08CDC0032C728 /* AppDelegate.swift */; };
 		BBE25D4F25C08CDC0032C728 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE25D4E25C08CDC0032C728 /* SceneDelegate.swift */; };
 		BBE25D5125C08CDC0032C728 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE25D5025C08CDC0032C728 /* BookListViewController.swift */; };
@@ -25,6 +26,16 @@
 		BBE25D6D25C093190032C728 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BBE25D6C25C093190032C728 /* SnapKit */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BB8C3EAF25C6EFF500BFD3DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBE25D4125C08CDC0032C728 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBE25D4825C08CDC0032C728;
+			remoteInfo = BookList;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		BB0666E325C493BA00DF80DF /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		BB0666E825C56E0E00DF80DF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -34,6 +45,9 @@
 		BB06670025C5DD1900DF80DF /* AuthorStringConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorStringConverter.swift; sourceTree = "<group>"; };
 		BB06670325C5F4E900DF80DF /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		BB06670725C6E83600DF80DF /* BookListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListHeaderView.swift; sourceTree = "<group>"; };
+		BB8C3EAA25C6EFF500BFD3DA /* BookListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8C3EAC25C6EFF500BFD3DA /* BookListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTests.swift; sourceTree = "<group>"; };
+		BB8C3EAE25C6EFF500BFD3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBE25D4925C08CDC0032C728 /* BookList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE25D4C25C08CDC0032C728 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBE25D4E25C08CDC0032C728 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +58,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BB8C3EA725C6EFF500BFD3DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBE25D4625C08CDC0032C728 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,10 +108,20 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		BB8C3EAB25C6EFF500BFD3DA /* BookListTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB8C3EAC25C6EFF500BFD3DA /* BookListTests.swift */,
+				BB8C3EAE25C6EFF500BFD3DA /* Info.plist */,
+			);
+			path = BookListTests;
+			sourceTree = "<group>";
+		};
 		BBE25D4025C08CDC0032C728 = {
 			isa = PBXGroup;
 			children = (
 				BBE25D4B25C08CDC0032C728 /* BookList */,
+				BB8C3EAB25C6EFF500BFD3DA /* BookListTests */,
 				BBE25D4A25C08CDC0032C728 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				BBE25D4925C08CDC0032C728 /* BookList.app */,
+				BB8C3EAA25C6EFF500BFD3DA /* BookListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +153,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BB8C3EA925C6EFF500BFD3DA /* BookListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB8C3EB325C6EFF500BFD3DA /* Build configuration list for PBXNativeTarget "BookListTests" */;
+			buildPhases = (
+				BB8C3EA625C6EFF500BFD3DA /* Sources */,
+				BB8C3EA725C6EFF500BFD3DA /* Frameworks */,
+				BB8C3EA825C6EFF500BFD3DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB8C3EB025C6EFF500BFD3DA /* PBXTargetDependency */,
+			);
+			name = BookListTests;
+			productName = BookListTests;
+			productReference = BB8C3EAA25C6EFF500BFD3DA /* BookListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BBE25D4825C08CDC0032C728 /* BookList */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBE25D5D25C08CDD0032C728 /* Build configuration list for PBXNativeTarget "BookList" */;
@@ -152,6 +202,10 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					BB8C3EA925C6EFF500BFD3DA = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = BBE25D4825C08CDC0032C728;
+					};
 					BBE25D4825C08CDC0032C728 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -176,11 +230,19 @@
 			projectRoot = "";
 			targets = (
 				BBE25D4825C08CDC0032C728 /* BookList */,
+				BB8C3EA925C6EFF500BFD3DA /* BookListTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BB8C3EA825C6EFF500BFD3DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBE25D4725C08CDC0032C728 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,6 +255,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BB8C3EA625C6EFF500BFD3DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8C3EAD25C6EFF500BFD3DA /* BookListTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBE25D4525C08CDC0032C728 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +283,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BB8C3EB025C6EFF500BFD3DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBE25D4825C08CDC0032C728 /* BookList */;
+			targetProxy = BB8C3EAF25C6EFF500BFD3DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		BBE25D5725C08CDD0032C728 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -225,6 +303,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BB8C3EB125C6EFF500BFD3DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BookListTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.prisma.BookListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BookList.app/BookList";
+			};
+			name = Debug;
+		};
+		BB8C3EB225C6EFF500BFD3DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BookListTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.prisma.BookListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BookList.app/BookList";
+			};
+			name = Release;
+		};
 		BBE25D5B25C08CDD0032C728 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -380,6 +496,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BB8C3EB325C6EFF500BFD3DA /* Build configuration list for PBXNativeTarget "BookListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8C3EB125C6EFF500BFD3DA /* Debug */,
+				BB8C3EB225C6EFF500BFD3DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BBE25D4425C08CDC0032C728 /* Build configuration list for PBXProject "BookList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

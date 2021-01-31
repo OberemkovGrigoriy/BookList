@@ -19,12 +19,14 @@ final class BookListViewModel {
 
     private let imageCache = ImageCache<UUID>()
     private let searchService: SearchServiceProtocol
+    private let stringConverter: AuthorStringConverterProtocol
     private var items = [BookSetupModel]()
     private var currentPage = "10"
     private var isDownlaoding = false
-    
-    init(searchService: SearchServiceProtocol = SearchService()) {
+
+    init(searchService: SearchServiceProtocol = SearchService(), stringConverter: AuthorStringConverterProtocol = AuthorStringConverter()) {
         self.searchService = searchService
+        self.stringConverter = stringConverter
     }
 
     func downlaodBooks() {
@@ -40,8 +42,8 @@ final class BookListViewModel {
                                 id: UUID(),
                                 url: $0.cover?.url ?? "",
                                 title: $0.title ?? "",
-                                authors: AuthorStringConverter.convertAuthors($0.authors),
-                                narrators: AuthorStringConverter.convertAuthors($0.narrators)
+                                authors: self.stringConverter.convertAuthors($0.authors),
+                                narrators: self.stringConverter.convertAuthors($0.narrators)
                             )
                         }
                         self.items.append(contentsOf: setupItems)

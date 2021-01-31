@@ -7,8 +7,12 @@
 
 import Foundation
 
-enum AuthorStringConverter {
-    static func convertAuthors(_ authors: [Author]?) -> String {
+protocol AuthorStringConverterProtocol {
+    func convertAuthors(_ authors: [Author]?) -> String
+}
+
+final class AuthorStringConverter: AuthorStringConverterProtocol {
+    func convertAuthors(_ authors: [Author]?) -> String {
         guard let authors = authors?.compactMap({ $0.name }), authors.count > 0 else {
             return ""
         }
