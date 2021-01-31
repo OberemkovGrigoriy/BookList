@@ -12,7 +12,7 @@ final class ImageCache<Key: Hashable & ReferenceConvertible> {
 
     init() {
         self.cache = .init()
-        self.cache.countLimit = 40
+        self.cache.countLimit = 80
     }
 
     func save(image: UIImage, key: Key) {

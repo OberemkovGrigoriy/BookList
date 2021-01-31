@@ -17,7 +17,6 @@ final class BookListViewModel {
 
     var delegate: BookListViewModelDelegate?
 
-    private let imageCache = ImageCache<UUID>()
     private let searchService: SearchServiceProtocol
     private let stringConverter: AuthorStringConverterProtocol
     private var items = [BookSetupModel]()
@@ -29,7 +28,7 @@ final class BookListViewModel {
         self.stringConverter = stringConverter
     }
 
-    func downlaodBooks() {
+    func downloadBooks() {
         if !isDownlaoding {
             self.isDownlaoding = true
             searchService.request(path: "search?query=harry&page=\(currentPage)") {  [weak self] (result: SearchResult) in
@@ -68,15 +67,8 @@ final class BookListViewModel {
     }
 
     func loadBookCover(url: String, id: UUID, completion: @escaping BookListViewController.BookCoverLoadCompletion) {
-        if let image = imageCache.image(key: id) {
-            completion(image.decodedImage(), id)
-            return 
-        } else {
-            self.searchService.requestImage(path: url) { image in
-                completion(image, id)
-                let img = image.decodedImage()
-                self.imageCache.save(image: img, key: id)
-            }
+        self.searchService.requestImage(path: url, id: id) { image in
+            completion(image, id)
         }
     }
 }

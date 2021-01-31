@@ -15,7 +15,10 @@
 		BB06670125C5DD1A00DF80DF /* AuthorStringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06670025C5DD1900DF80DF /* AuthorStringConverter.swift */; };
 		BB06670425C5F4E900DF80DF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06670325C5F4E900DF80DF /* ImageCache.swift */; };
 		BB06670825C6E83600DF80DF /* BookListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06670725C6E83600DF80DF /* BookListHeaderView.swift */; };
-		BB8C3EAD25C6EFF500BFD3DA /* BookListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C3EAC25C6EFF500BFD3DA /* BookListTests.swift */; };
+		BB8C3EAD25C6EFF500BFD3DA /* BookListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C3EAC25C6EFF500BFD3DA /* BookListViewModelTests.swift */; };
+		BB8C3EBA25C6F2B500BFD3DA /* SearchServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C3EB925C6F2B500BFD3DA /* SearchServiceMock.swift */; };
+		BB8C3EC025C6F4D600BFD3DA /* AuthorStringConverterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C3EBF25C6F4D600BFD3DA /* AuthorStringConverterMock.swift */; };
+		BB8C3EC425C7005B00BFD3DA /* BookListViewModelDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C3EC325C7005B00BFD3DA /* BookListViewModelDelegateMock.swift */; };
 		BBE25D4D25C08CDC0032C728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE25D4C25C08CDC0032C728 /* AppDelegate.swift */; };
 		BBE25D4F25C08CDC0032C728 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE25D4E25C08CDC0032C728 /* SceneDelegate.swift */; };
 		BBE25D5125C08CDC0032C728 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE25D5025C08CDC0032C728 /* BookListViewController.swift */; };
@@ -46,8 +49,11 @@
 		BB06670325C5F4E900DF80DF /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		BB06670725C6E83600DF80DF /* BookListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListHeaderView.swift; sourceTree = "<group>"; };
 		BB8C3EAA25C6EFF500BFD3DA /* BookListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB8C3EAC25C6EFF500BFD3DA /* BookListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTests.swift; sourceTree = "<group>"; };
+		BB8C3EAC25C6EFF500BFD3DA /* BookListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModelTests.swift; sourceTree = "<group>"; };
 		BB8C3EAE25C6EFF500BFD3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB8C3EB925C6F2B500BFD3DA /* SearchServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceMock.swift; sourceTree = "<group>"; };
+		BB8C3EBF25C6F4D600BFD3DA /* AuthorStringConverterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorStringConverterMock.swift; sourceTree = "<group>"; };
+		BB8C3EC325C7005B00BFD3DA /* BookListViewModelDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModelDelegateMock.swift; sourceTree = "<group>"; };
 		BBE25D4925C08CDC0032C728 /* BookList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE25D4C25C08CDC0032C728 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBE25D4E25C08CDC0032C728 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,10 +117,21 @@
 		BB8C3EAB25C6EFF500BFD3DA /* BookListTests */ = {
 			isa = PBXGroup;
 			children = (
-				BB8C3EAC25C6EFF500BFD3DA /* BookListTests.swift */,
+				BB8C3EB825C6F29F00BFD3DA /* Mocks */,
+				BB8C3EAC25C6EFF500BFD3DA /* BookListViewModelTests.swift */,
 				BB8C3EAE25C6EFF500BFD3DA /* Info.plist */,
 			);
 			path = BookListTests;
+			sourceTree = "<group>";
+		};
+		BB8C3EB825C6F29F00BFD3DA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BB8C3EB925C6F2B500BFD3DA /* SearchServiceMock.swift */,
+				BB8C3EBF25C6F4D600BFD3DA /* AuthorStringConverterMock.swift */,
+				BB8C3EC325C7005B00BFD3DA /* BookListViewModelDelegateMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		BBE25D4025C08CDC0032C728 = {
@@ -259,7 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB8C3EAD25C6EFF500BFD3DA /* BookListTests.swift in Sources */,
+				BB8C3EAD25C6EFF500BFD3DA /* BookListViewModelTests.swift in Sources */,
+				BB8C3EC025C6F4D600BFD3DA /* AuthorStringConverterMock.swift in Sources */,
+				BB8C3EC425C7005B00BFD3DA /* BookListViewModelDelegateMock.swift in Sources */,
+				BB8C3EBA25C6F2B500BFD3DA /* SearchServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

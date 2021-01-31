@@ -54,7 +54,7 @@ final class BookListViewController: UIViewController {
         self.setupLayout()
         self.setupView()
         self.viewModel.delegate = self
-        self.viewModel.downlaodBooks()
+        self.viewModel.downloadBooks()
     }
 
     private func setupView() {
@@ -73,7 +73,7 @@ final class BookListViewController: UIViewController {
         self.errorStack.isHidden = true
         self.activityIndicator.isHidden = false
         self.activityIndicator.startAnimating()
-        self.viewModel.downlaodBooks()
+        self.viewModel.downloadBooks()
     }
     
     private func setupLayout() {
@@ -154,7 +154,7 @@ extension BookListViewController: UITableViewDelegate {
             self.tableView.tableFooterView = footerSpinner
             self.footerSpinner.isHidden = false
             self.footerSpinner.startAnimating()
-            self.viewModel.downlaodBooks()
+            self.viewModel.downloadBooks()
         }
     }
     
